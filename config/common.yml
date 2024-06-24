@@ -1,0 +1,47 @@
+services:
+  _defaults:
+    public: true
+
+  webo_product_buttons.module:
+    class: webo_productbuttons
+    factory: [ 'Module', 'getInstanceByName' ]
+    public: false
+    arguments:
+      - 'webo_productbuttons'
+
+  webo_product_buttons.module.db:
+    class: Db
+    public: true
+    autowire: false
+    factory: [ \Db, 'getInstance' ]
+
+  webo_product_buttons.hook.abstract_hook:
+    class: WeboProductButtons\Hook\AbstractHook
+    arguments:
+      - '@webo_product_buttons.module'
+      - "@=service('prestashop.adapter.legacy.context').getContext()"
+
+  webo_product_buttons.hook.action_admin_products_controller_save_after:
+    class: WeboProductButtons\Hook\ActionAdminProductsControllerSaveAfter
+    public: true
+    parent: 'webo_product_buttons.hook.abstract_hook'
+
+  webo_product_buttons.hook.display_admin_products_extra:
+    class: WeboProductButtons\Hook\DisplayAdminProductsExtra
+    public: true
+    parent: 'webo_product_buttons.hook.abstract_hook'
+
+  webo_product_buttons.hook.display_header:
+    class: WeboProductButtons\Hook\DisplayHeader
+    public: true
+    parent: 'webo_product_buttons.hook.abstract_hook'
+
+  webo_product_buttons.hook.display_webo_product_buttons:
+    class: WeboProductButtons\Hook\DisplayWeboProductButtons
+    public: true
+    parent: 'webo_product_buttons.hook.abstract_hook'
+
+  webo_product_buttons.hook.action_front_controller_set_media:
+    class: WeboProductButtons\Hook\ActionFrontControllerSetMedia
+    public: true
+    parent: 'webo_product_buttons.hook.abstract_hook'
