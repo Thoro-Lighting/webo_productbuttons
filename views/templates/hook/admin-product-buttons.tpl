@@ -6,7 +6,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <label class="form-control-label" for="three_dimensional">
-                {l s='Link 3D' d='Modules.WeboProductbuttons.Admin'}
+                {l s='3D ID' d='Modules.WeboProductbuttons.Admin'}
             </label>
             <input type="text"
                    id="three_dimensional"

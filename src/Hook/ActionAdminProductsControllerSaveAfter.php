@@ -18,9 +18,17 @@ class ActionAdminProductsControllerSaveAfter extends AbstractHook
                 'ar' => Tools::getValue('ar')
             ];
 
+            $this->validate($data['three_dimensional'], $data['ar']);
+
             return ProductButtons::saveData($product->id, $data);
         }
 
         return true;
+    }
+    private function validate($threeDimensional, $ar)
+    {
+        if ((!empty($threeDimensional) && strlen($threeDimensional) > 10) || (!empty($ar) && strlen($ar) > 10)) {
+            throw new \PrestaShopException('Pola muszą mieć od 0 do 10 znaków');
+        }
     }
 }

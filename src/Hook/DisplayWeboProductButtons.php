@@ -11,7 +11,7 @@ class DisplayWeboProductButtons extends AbstractHook {
     public function execute(array $params)
     {
          if(!empty($params['productId'])) {
-             $data = ProductButtons::getAllDataByProductId($params['productId']);
+             $data = ProductButtons::getAllDataByProductId((int) $params['productId']);
 
              if(!empty($data)) {
                  $this->context->smarty->assign([
