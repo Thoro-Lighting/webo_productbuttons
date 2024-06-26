@@ -1,3 +1,4 @@
+{*
 {if !empty($three_dimensional)}
     {literal}
         <script src="https://thoro.cloud.arlity.com/viewer/embed/js/Viewer.min.js" defer type="module"></script>
@@ -18,3 +19,4 @@
         </script>
     {/literal}
 {/if}
+*}
