@@ -4,7 +4,7 @@
 
         <script>
             var ARLITY_VIEWER_PRODUCT_UUID = '{/literal}{$three_dimensional}{literal}';
-            var ARLITY_VIEWER_AUTOLOAD = 'load';
+            var ARLITY_VIEWER_AUTOLOAD = 'scroll';
         </script>
     {/literal}
 {/if}
