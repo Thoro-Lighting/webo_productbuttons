@@ -5,6 +5,15 @@
                 <div class="product-buttons__item">
                     <button type="button" data-toggle="arlity-open-3d-preview" data-id="{$three_dimensional}" class="btn btn-outline-primary btn-small product-buttons__btn">{l s='Pokaż w 3D' d='Moduels.Webodelivery.Front'}</button>
                 </div>
+                <div class="product-buttons__item">
+                    <button type="button" data-toggle="arlity-show-in-ar" data-id="{$three_dimensional}" class="btn btn-outline-primary btn-small product-buttons__btn">{l s='Pokaż w 3D' d='Moduels.Webodelivery.Front'}</button>
+                </div>
+                <div class="product-buttons__item">
+                    <button type="button" data-toggle="arlity-show-form" data-id="{$three_dimensional}" class="btn btn-outline-primary btn-small product-buttons__btn">{l s='Pokaż w 3D' d='Moduels.Webodelivery.Front'}</button>
+                </div>
+                <div class="product-buttons__item">
+                    <button type="button" data-toggle="arlity-viewer-fullscreen" data-id="{$three_dimensional}" class="btn btn-outline-primary btn-small product-buttons__btn">{l s='Pokaż w 3D' d='Moduels.Webodelivery.Front'}</button>
+                </div>
             {/if}
             {if !empty($ar_link)}
                 <div class="product-buttons__item">
