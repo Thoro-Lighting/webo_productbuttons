@@ -16,7 +16,7 @@ class ProductButtons extends ObjectModel {
         'table' => 'webo_product_buttons',
         'primary' => 'id_product_buttons',
         'fields' => [
-            'id_product' => ['type' => self::TYPE_INT, 'validate' => 'isInt', 'size' => 3],
+            'id_product' => ['type' => self::TYPE_INT, 'validate' => 'isInt', 'size' => 11],
             'three_dimensional' => ['type' => self::TYPE_STRING, 'validate' => 'isString', 'size' => 10],
             'ar' => ['type' => self::TYPE_STRING, 'validate' => 'isString', 'size' => 10],
         ],
